@@ -6,14 +6,14 @@ public class camera : MonoBehaviour
     protected Transform xcamera;
 
 
-    protected Vector3 localrotation;
+    protected Vector3 localRotation;
     protected float CameraDistance = 10f;
 
-    public float mousesensitivity = 1f;
-    public float scrollsensitivity = 2f;
-    public float scrollspeed = 2f;
+    public float mouseSensitivity = 1f;
+    public float scrollSensitivity = 2f;
+    public float scrollSpeed = 2f;
 
-    public bool cameradisable = true;
+    public bool isCameraDisabled = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,36 +26,36 @@ public class camera : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            cameradisable = false;
+            isCameraDisabled = false;
         }
         else
         {
-            cameradisable = true;
+            isCameraDisabled = true;
         }
-        if (!cameradisable)
+        if (!isCameraDisabled)
         {
             //Rotacja kamery przy pomocy myszki
             if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
             {
-                localrotation.x -= Input.GetAxis("Mouse X") * mousesensitivity;
-                localrotation.y -= Input.GetAxis("Mouse Y") * mousesensitivity;
+                localRotation.x -= Input.GetAxis("Mouse X") * mouseSensitivity;
+                localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-                if (localrotation.y < -10f)
+                if (localRotation.y < -10f)
                 {
-                    localrotation.y = -10f;
+                    localRotation.y = -10f;
                 }
-                else if (localrotation.y > 10f)
+                else if (localRotation.y > 10f)
                 {
-                    localrotation.y = 10f;
+                    localRotation.y = 10f;
                 }
 
-                if (localrotation.x < -10f)
+                if (localRotation.x < -10f)
                 {
-                    localrotation.x = -10f;
+                    localRotation.x = -10f;
                 }
-                else if (localrotation.x > 10f)
+                else if (localRotation.x > 10f)
                 {
-                    localrotation.x = 10f;
+                    localRotation.x = 10f;
                 }
 
             }
@@ -64,7 +64,7 @@ public class camera : MonoBehaviour
         }
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
-            float Scroll = Input.GetAxis("Mouse ScrollWheel") * scrollsensitivity;
+            float Scroll = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity;
             Scroll *= (this.CameraDistance * 0.3f);
 
             this.CameraDistance += (Scroll * -1f);
@@ -84,8 +84,8 @@ public class camera : MonoBehaviour
 
         if (this.xcamera.localPosition.z != this.CameraDistance * -1f)
         {
-            this.xcamera.localPosition = new Vector3(Mathf.Lerp(this.xcamera.localPosition.x, this.localrotation.x, Time.deltaTime * mousesensitivity), Mathf.Lerp(this.xcamera.localPosition.y, this.localrotation.y,
-                Time.deltaTime * mousesensitivity), Mathf.Lerp(this.xcamera.localPosition.z, this.CameraDistance * -1f, Time.deltaTime * scrollspeed));
+            this.xcamera.localPosition = new Vector3(Mathf.Lerp(this.xcamera.localPosition.x, this.localRotation.x, Time.deltaTime * mouseSensitivity), Mathf.Lerp(this.xcamera.localPosition.y, this.localRotation.y,
+                Time.deltaTime * mouseSensitivity), Mathf.Lerp(this.xcamera.localPosition.z, this.CameraDistance * -1f, Time.deltaTime * scrollSpeed));
 
         }
 
