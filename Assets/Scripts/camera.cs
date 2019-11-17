@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class camera : MonoBehaviour
+public class Camera : MonoBehaviour
 {
 
     protected Transform xcamera;

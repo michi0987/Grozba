@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int ID;
+    public List<Territory> Territories = new List<Territory>();
+    public Color Color;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

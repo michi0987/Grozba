@@ -6,22 +6,10 @@ using UnityEngine;
 
 public class Territory : MonoBehaviour
 {
-
-    public Color32 hoverColor = new Color32(255, 0, 0, 255);
-    public Territory[] nodes;
-    public string objectName;
-    TextMesh textHelper;
-    protected Transform objTransform;
+    public Territory[] Neighoburs;
+    private Color hoverColor = new Color32(255, 0, 0, 255);
 
 
-
-    void Start()
-    {
-        objectName = gameObject.name;
-        Debug.Log(objectName);
-        objTransform = GetComponent<SpriteRenderer>().transform;
-
-    }
 
     private void OnMouseEnter()
     {
@@ -30,10 +18,6 @@ public class Territory : MonoBehaviour
 
     private void OnMouseExit()
     {
-        GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
-    }
-    void OnGui()
-    {
-        GUI.Label(new Rect(objTransform.position.x+1, objTransform.position.y, 100, 20), "Hello WorlDDDDDDDDDDDDDd!");
+        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
     }
 }
