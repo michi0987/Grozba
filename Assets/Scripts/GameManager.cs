@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
+        
         foreach(Transform child in TerritoriesManager.transform)
         {
             child.GetComponent<SpriteRenderer>().color = child.GetComponent<Territory>().standardColor;
