@@ -11,26 +11,24 @@ public class PlayersManager : MonoBehaviour
     private int aliveCount;
     public int AliveCount { get => aliveCount; set {} }
 
-    List<Player> Players = new List<Player>();
+    private List<Player> players = new List<Player>();
+    public List<Player> Players { get => players; set {} }
 
     private Color[] colorPalette = new Color[] { Color.blue, Color.red, Color.green, Color.yellow}; //to na razie tylko dla testów
-
-
-
-
 
     public bool CreatePlayers(int playersCount)
     {
         if(!PlayersCreated)
         {
-            for(int i = 0; i < playersCount; i ++)
+            count = playersCount;
+            for(int i = 0; i < count; i ++)
             {
                 GameObject playerObject = new GameObject("Player" + (i + 1));
                 playerObject.AddComponent<Player>();
+                playerObject.transform.parent = this.transform;
                 Players.Add(playerObject.GetComponent<Player>());
                 Players[i].Color = colorPalette[i];
             }
-
             return true;
         } 
         else
@@ -38,4 +36,6 @@ public class PlayersManager : MonoBehaviour
             return false;
         }
     }
+
+
 }

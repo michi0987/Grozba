@@ -219,6 +219,9 @@ MonoBehaviour:
   - {fileID: 1500840937}
   - {fileID: 1419878289}
   - {fileID: 1686713365}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &68830610
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -376,6 +379,9 @@ MonoBehaviour:
   Neighoburs:
   - {fileID: 1419878289}
   - {fileID: 1965808619}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &72146740
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -531,6 +537,9 @@ MonoBehaviour:
   - {fileID: 1315705504}
   - {fileID: 1531388778}
   - {fileID: 1446804625}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &130987357
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -703,6 +712,9 @@ MonoBehaviour:
   - {fileID: 439157089}
   - {fileID: 1668570964}
   - {fileID: 1843592428}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &177149122
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -856,6 +868,9 @@ MonoBehaviour:
   - {fileID: 1744354081}
   - {fileID: 1527711500}
   - {fileID: 2057990986}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &188995272
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -992,6 +1007,9 @@ MonoBehaviour:
   - {fileID: 1762818090}
   - {fileID: 498056452}
   - {fileID: 558454593}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &364867169
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1134,6 +1152,9 @@ MonoBehaviour:
   - {fileID: 662666062}
   - {fileID: 1251158371}
   - {fileID: 398736585}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &382263995
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1321,6 +1342,9 @@ MonoBehaviour:
   - {fileID: 382263994}
   - {fileID: 1668570964}
   - {fileID: 1843592428}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &398736586
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1503,6 +1527,9 @@ MonoBehaviour:
   - {fileID: 1483718168}
   - {fileID: 1102662848}
   - {fileID: 1354561721}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &439157090
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1715,6 +1742,9 @@ MonoBehaviour:
   - {fileID: 1102662848}
   - {fileID: 1187797838}
   - {fileID: 1446804625}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &449195682
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1903,6 +1933,9 @@ MonoBehaviour:
   - {fileID: 558454593}
   - {fileID: 177149121}
   - {fileID: 1668570964}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &498056453
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2073,6 +2106,9 @@ MonoBehaviour:
   - {fileID: 1945325942}
   - {fileID: 626963775}
   - {fileID: 1483718168}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &505054474
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2245,6 +2281,9 @@ MonoBehaviour:
   - {fileID: 364867168}
   - {fileID: 177149121}
   - {fileID: 439157089}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &558454594
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2400,6 +2439,9 @@ MonoBehaviour:
   Neighoburs:
   - {fileID: 505054473}
   - {fileID: 1945325942}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &626963776
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2540,6 +2582,9 @@ MonoBehaviour:
   - {fileID: 1393463001}
   - {fileID: 382263994}
   - {fileID: 1251158371}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &662666063
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2708,6 +2753,9 @@ MonoBehaviour:
   - {fileID: 1527711500}
   - {fileID: 1762818090}
   - {fileID: 1785985634}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &668136620
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3082,6 +3130,9 @@ MonoBehaviour:
   - {fileID: 1187797838}
   - {fileID: 1483718168}
   - {fileID: 439157089}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1102662849
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3251,6 +3302,9 @@ MonoBehaviour:
   - {fileID: 449195681}
   - {fileID: 1483718168}
   - {fileID: 1446804625}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1187797839
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3422,6 +3476,9 @@ MonoBehaviour:
   Neighoburs:
   - {fileID: 662666062}
   - {fileID: 382263994}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1251158372
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3585,6 +3642,9 @@ MonoBehaviour:
   - {fileID: 130987356}
   - {fileID: 1531388778}
   - {fileID: 1696551206}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1315705505
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3723,6 +3783,9 @@ MonoBehaviour:
   - {fileID: 1102662848}
   - {fileID: 449195681}
   - {fileID: 439157089}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1354561722
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3800,6 +3863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357400860}
   - component: {fileID: 1357400859}
+  - component: {fileID: 1357400861}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -3912,6 +3976,18 @@ Transform:
   m_Father: {fileID: 1960158971}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357400861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357400858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fbcd774c7f6cd4fb38f4538100ac98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1393462998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4011,6 +4087,9 @@ MonoBehaviour:
   - {fileID: 1610032729}
   - {fileID: 662666062}
   - {fileID: 382263994}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1393463002
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4167,6 +4246,9 @@ MonoBehaviour:
   - {fileID: 1965808619}
   - {fileID: 72146739}
   - {fileID: 1743022498}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1419878290
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4352,6 +4434,9 @@ MonoBehaviour:
   - {fileID: 449195681}
   - {fileID: 1187797838}
   - {fileID: 130987356}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1446804626
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4504,6 +4589,9 @@ MonoBehaviour:
   - {fileID: 1843592428}
   - {fileID: 1942730151}
   - {fileID: 505054473}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1483718169
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4686,6 +4774,9 @@ MonoBehaviour:
   - {fileID: 398736585}
   - {fileID: 505054473}
   - {fileID: 1945325942}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1490642168
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4852,6 +4943,9 @@ MonoBehaviour:
   - {fileID: 1686713365}
   - {fileID: 1965808619}
   - {fileID: 449195681}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1500840938
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5049,6 +5143,9 @@ MonoBehaviour:
   - {fileID: 1785985634}
   - {fileID: 2057990986}
   - {fileID: 188995271}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1527711501
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5199,6 +5296,9 @@ MonoBehaviour:
   - {fileID: 130987356}
   - {fileID: 1315705504}
   - {fileID: 1696551206}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1531388779
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5353,6 +5453,9 @@ MonoBehaviour:
   - {fileID: 2057990986}
   - {fileID: 1785985634}
   - {fileID: 1393463001}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1610032730
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5501,6 +5604,9 @@ MonoBehaviour:
   - {fileID: 177149121}
   - {fileID: 1843592428}
   - {fileID: 398736585}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1668570965
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5657,6 +5763,9 @@ MonoBehaviour:
   - {fileID: 68830609}
   - {fileID: 1419878289}
   - {fileID: 1965808619}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1686713366
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5821,6 +5930,9 @@ MonoBehaviour:
   Neighoburs:
   - {fileID: 1315705504}
   - {fileID: 1531388778}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1696551207
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5974,6 +6086,9 @@ MonoBehaviour:
   - {fileID: 1744354081}
   - {fileID: 188995271}
   - {fileID: 1419878289}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1743022499
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6126,6 +6241,9 @@ MonoBehaviour:
   - {fileID: 188995271}
   - {fileID: 1527711500}
   - {fileID: 1762818090}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1744354082
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6275,6 +6393,9 @@ MonoBehaviour:
   - {fileID: 1527711500}
   - {fileID: 668136619}
   - {fileID: 364867168}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1762818091
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6438,6 +6559,9 @@ MonoBehaviour:
   - {fileID: 668136619}
   - {fileID: 2057990986}
   - {fileID: 1610032729}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1785985635
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6607,6 +6731,9 @@ MonoBehaviour:
   - {fileID: 398736585}
   - {fileID: 1942730151}
   - {fileID: 1483718168}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1843592429
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6764,6 +6891,9 @@ MonoBehaviour:
   - {fileID: 505054473}
   - {fileID: 1843592428}
   - {fileID: 1483718168}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1942730152
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -6914,6 +7044,9 @@ MonoBehaviour:
   - {fileID: 505054473}
   - {fileID: 1490642167}
   - {fileID: 626963775}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1945325943
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7026,8 +7159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8e7485a6d2c7464b9d864b453893bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Count: 0
-  AliveCount: 0
 --- !u!1 &1960158970
 GameObject:
   m_ObjectHideFlags: 0
@@ -7075,6 +7206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8fdb4b20beaa64c933175e0414d98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayersManager: {fileID: 0}
+  TerritoriesManager: {fileID: 0}
 --- !u!1 &1965808616
 GameObject:
   m_ObjectHideFlags: 0
@@ -7176,6 +7309,9 @@ MonoBehaviour:
   - {fileID: 1686713365}
   - {fileID: 72146739}
   - {fileID: 449195681}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1965808620
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -7346,6 +7482,9 @@ MonoBehaviour:
   - {fileID: 1527711500}
   - {fileID: 1785985634}
   - {fileID: 1610032729}
+  Owner: {fileID: 0}
+  hoverColor: {r: 1, g: 0, b: 0, a: 1}
+  standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &2057990987
 PolygonCollider2D:
   m_ObjectHideFlags: 0

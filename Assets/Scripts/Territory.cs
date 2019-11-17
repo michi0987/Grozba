@@ -7,10 +7,12 @@ using UnityEngine;
 public class Territory : MonoBehaviour
 {
     public Territory[] Neighoburs;
-    private Color hoverColor = new Color32(255, 0, 0, 255);
+    public Player Owner;
 
+    public Color hoverColor = new Color32(0, 0, 0, 255);
+    public Color standardColor;
 
-
+  
     private void OnMouseEnter()
     {
         GetComponent<SpriteRenderer>().color = hoverColor;
@@ -18,6 +20,6 @@ public class Territory : MonoBehaviour
 
     private void OnMouseExit()
     {
-        GetComponent<SpriteRenderer>().color = new Color(255, 255, 255, 255);
+        GetComponent<SpriteRenderer>().color = standardColor;
     }
 }
