@@ -7,7 +7,10 @@ public class TerritoriesManager : MonoBehaviour
     private List<Territory> territories = new List<Territory>();
     public List<Territory> Territories { get => territories; set { } }
 
-    public bool ShowOwners = false;
+    public Territory ActiveTerritory;
+
+
+    public Color hoverColor = new Color(239, 236, 148, 255);
    
 
     public void SetTerritories()
@@ -15,6 +18,14 @@ public class TerritoriesManager : MonoBehaviour
         foreach(Transform child in transform)
         {
             territories.Add(child.GetComponent<Territory>());
+            child.GetComponent<Territory>().Manager = this;
         }
+    }
+    
+    public Territory GetActiveTerritory()
+    {
+        Territory active = ActiveTerritory;
+        ActiveTerritory = null;
+        return active;
     }
 }
