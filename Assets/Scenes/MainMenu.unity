@@ -6355,7 +6355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7fbcd774c7f6cd4fb38f4538100ac98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowOwners: 0
+  ActiveTerritory: {fileID: 0}
+  hoverColor: {r: 239, g: 236, b: 148, a: 255}
 --- !u!1 &1366490317
 GameObject:
   m_ObjectHideFlags: 0

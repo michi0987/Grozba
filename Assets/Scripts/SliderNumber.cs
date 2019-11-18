@@ -12,8 +12,8 @@ public class SliderNumber : MonoBehaviour
         TextPro = GetComponent<TMPro.TextMeshProUGUI>();
     }
 
-    public void SetSliderValue(float sliderValue)
-    {
+    public void SetSliderValue(float sliderValue) {
         TextPro.text = Mathf.Round(sliderValue).ToString();
+        GameManager.Instance.PlayerCount = (int)sliderValue;
     }
 }
