@@ -15,6 +15,5 @@ public class SliderNumber : MonoBehaviour
     public void SetSliderValue(float sliderValue)
     {
         TextPro.text = Mathf.Round(sliderValue).ToString();
-        //textComponent.text = ;
     }
 }
