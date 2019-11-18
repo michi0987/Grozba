@@ -16,6 +16,7 @@ public class GameManager
         }
     }
 
+    //Liczba graczy
     private int playerCount = 0;
 
     public int PlayerCount {
@@ -28,4 +29,12 @@ public class GameManager
             Debug.Log("Ustawiono " + playerCount + " graczy");
         }
     }
+
+    //Przydzielanie terytorium
+    public enum AssignmentType { 
+        manual,
+        random
+    }
+
+    public AssignmentType TerritoryAssignment;
 }

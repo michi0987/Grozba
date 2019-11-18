@@ -7,8 +7,6 @@ public class BoardManager : MonoBehaviour
     public PlayersManager PlayersManager;
     public TerritoriesManager TerritoriesManager;
 
-    public bool randomAssignTerritories;
-
     void Awake()
     {
         PlayersManager = gameObject.transform.Find("Players").GetComponent<PlayersManager>();
@@ -47,7 +45,7 @@ public class BoardManager : MonoBehaviour
 
     private void Start()
     {
-        if (randomAssignTerritories)
+        if (GameManager.Instance.TerritoryAssignment == GameManager.AssignmentType.random)
         {
             RandomAssignTerritories();
         }

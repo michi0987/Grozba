@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SliderNumber : MonoBehaviour
+public class PlayerCountSlider : MonoBehaviour
 {
     TextMeshProUGUI TextPro;
 

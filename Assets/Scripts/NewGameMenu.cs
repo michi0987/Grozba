@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NewGameMenu : MonoBehaviour
 {
-    public void StartNewGame()
-    {
+    public void StartNewGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void SetTerritoryAssigment(int index) {
+        GameManager.Instance.TerritoryAssignment = (GameManager.AssignmentType)index;
+    }
 }
