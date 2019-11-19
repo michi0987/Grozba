@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class NewGameMenu : MonoBehaviour
 {
     public void StartNewGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerConfig pc = transform.Find("PlayerCountSlider/PlayerConfig").GetComponent<PlayerConfig>();
+        if (pc.ValidatePlayerNames()) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            pc.SetPlayerNames();
+        } 
     }
 
     public void SetTerritoryAssigment(int index) {

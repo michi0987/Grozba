@@ -5,10 +5,9 @@ using TMPro;
 
 public class PlayerCountSlider : MonoBehaviour
 {
-    TextMeshProUGUI TextPro;
+    private TextMeshProUGUI TextPro;
 
-    void Start()
-    {
+    void Start() {
         TextPro = GetComponent<TMPro.TextMeshProUGUI>();
     }
 

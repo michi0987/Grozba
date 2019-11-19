@@ -37,4 +37,8 @@ public class GameManager
     }
 
     public AssignmentType TerritoryAssignment;
+
+    //Nazwy i kolory graczy
+    public List<string> playerNames = new List<string>();
+    public List<Color> playerColors = new List<Color>();
 }
