@@ -73,14 +73,15 @@ public class Camera : MonoBehaviour
             {
                 CameraDistance = 1f;
             }
-            else if (CameraDistance > 80f)
+            else if (CameraDistance > 12f)
             {
-                CameraDistance = 80f;
+                CameraDistance = 12f;
             }
         }
 
         //Ustawienie ustawionych wcześniej właściwości na obiekcie kamery
 
+     
 
         if (this.xcamera.localPosition.z != this.CameraDistance * -1f)
         {
