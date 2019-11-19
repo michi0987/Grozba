@@ -10,7 +10,7 @@ public class TerritoriesManager : MonoBehaviour
     public Territory ActiveTerritory;
 
 
-    public Color hoverColor = new Color(239, 236, 148, 255);
+    public Color hoverColor = new Color(0, 0, 0, 255);
    
 
     public void SetTerritories()
