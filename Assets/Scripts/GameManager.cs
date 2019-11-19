@@ -17,7 +17,7 @@ public class GameManager
     }
 
     //Liczba graczy
-    private int playerCount = 0;
+    private int playerCount = 2;
 
     public int PlayerCount {
         get {

@@ -34,31 +34,41 @@ public class Camera : MonoBehaviour
         }
         if (!isCameraDisabled)
         {
-            //Rotacja kamery przy pomocy myszki
-            if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+            // kamery nie da sie obracac gdy zoom jest mały
+            if(CameraDistance < 9f)
             {
-                localRotation.x -= Input.GetAxis("Mouse X") * mouseSensitivity;
-                localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+                //Rotacja kamery przy pomocy myszki
+                if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
+                {
+                    localRotation.x -= Input.GetAxis("Mouse X") * mouseSensitivity;
+                    localRotation.y -= Input.GetAxis("Mouse Y") * mouseSensitivity;
 
-                if (localRotation.y < -10f)
-                {
-                    localRotation.y = -10f;
-                }
-                else if (localRotation.y > 10f)
-                {
-                    localRotation.y = 10f;
-                }
+                    if (localRotation.y < -10f)
+                    {
+                        localRotation.y = -10f;
+                    }
+                    else if (localRotation.y > 10f)
+                    {
+                        localRotation.y = 10f;
+                    }
 
-                if (localRotation.x < -10f)
-                {
-                    localRotation.x = -10f;
-                }
-                else if (localRotation.x > 10f)
-                {
-                    localRotation.x = 10f;
-                }
+                    if (localRotation.x < -10f)
+                    {
+                        localRotation.x = -10f;
+                    }
+                    else if (localRotation.x > 10f)
+                    {
+                        localRotation.x = 10f;
+                    }
 
+                }
             }
+            else
+            {
+                localRotation.y = 1;
+                localRotation.x = 0;
+            }
+
 
 
         }
