@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlayerCountSlider : MonoBehaviour
+public class RGBSlider : MonoBehaviour
 {
     private TextMeshProUGUI TextPro;
 
@@ -13,6 +13,5 @@ public class PlayerCountSlider : MonoBehaviour
 
     public void SetSliderValue(float sliderValue) {
         TextPro.text = Mathf.Round(sliderValue).ToString();
-        GameManager.Instance.PlayerCount = (int)sliderValue;
     }
 }

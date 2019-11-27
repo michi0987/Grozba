@@ -9,6 +9,8 @@ public class BoardManager : MonoBehaviour
     public PlayersManager PlayersManager;
     public TerritoriesManager TerritoriesManager;
 
+    private GameManager GM = GameManager.Instance;
+
     void Awake()
     {
         PlayersManager = gameObject.transform.Find("Players").GetComponent<PlayersManager>();
@@ -16,44 +18,36 @@ public class BoardManager : MonoBehaviour
 
         TerritoriesManager.SetTerritories();
 
-        //to listy są na razie tylko do testów, potem z interfejsu powinny być dodawane tutaj
-        List<string> names = new List<string>();
-        List<Color> colors = new List<Color>();
-
-        for (int i = 1; i <= GameManager.Instance.PlayerCount; i++) {
-            names.Add("Player " + i);
-        }
-        switch (GameManager.Instance.PlayerCount) {
+        switch (GM.PlayerCount) {
             case 6:
-                colors.Add(Color.magenta);
+                GM.playerColors.Add(Color.magenta);
                 goto case 5;
             case 5:
-                colors.Add(Color.cyan);
+                GM.playerColors.Add(Color.cyan);
                 goto case 4;
             case 4:
-                colors.Add(Color.green);
+                GM.playerColors.Add(Color.green);
                 goto case 3;
             case 3:
-                colors.Add(Color.yellow);
+                GM.playerColors.Add(Color.yellow);
                 goto case 2;
             case 2:
-                colors.Add(Color.blue);
-                colors.Add(Color.red);
+                GM.playerColors.Add(Color.blue);
+                GM.playerColors.Add(Color.red);
                 break;
         }
 
-        PlayersManager.CreatePlayers(GameManager.Instance.PlayerCount, names, colors);
+        PlayersManager.CreatePlayers(GM.PlayerCount, GM.playerNames, GM.playerColors);
     }
 
-    private void Start()
-    {
-        if (GameManager.Instance.TerritoryAssignment == GameManager.AssignmentType.random)
-        {
-            RandomAssignTerritories();
-        }
-        else
-        {
-            StartCoroutine(ManuallyAssignTerritories());
+    private void Start() {
+        switch (GM.TerritoryAssignment) {
+            case GameManager.AssignmentType.random:
+                RandomAssignTerritories();
+                break;
+            case GameManager.AssignmentType.manual:
+                StartCoroutine(ManuallyAssignTerritories());
+                break;
         }
     }
 
