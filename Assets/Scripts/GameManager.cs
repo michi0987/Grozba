@@ -19,6 +19,8 @@ public class GameManager
     //Liczba graczy
     private int playerCount = 2;
 
+    
+
     public int PlayerCount {
         get {
             return playerCount;
@@ -34,6 +36,14 @@ public class GameManager
     public enum AssignmentType { 
         manual,
         random
+    }
+
+    //aktualna tura
+    public enum Tura
+    {
+        zasoby,
+        przemieszczanie,
+        bitwa
     }
 
     public AssignmentType TerritoryAssignment;

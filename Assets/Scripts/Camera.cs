@@ -6,13 +6,22 @@ public class Camera : MonoBehaviour
     protected Transform xcamera;
 
 
+    //wektor pozwalajacy na sterowanie kamerą w 3 płaszczyznach
     protected Vector3 localRotation;
+    //zmienna pozwalająca przybliżać, oddalać
     protected float CameraDistance = 10f;
 
+    //Czułość myszki
     public float mouseSensitivity = 1f;
     public float scrollSensitivity = 2f;
+
+    //Testowanie zoomowania
+    public float zoomSensitivity = 0.01f;
+
+
     public float scrollSpeed = 2f;
 
+    //Tym można wyłączyć włączyć kamerę
     public bool isCameraDisabled = true;
     // Start is called before the first frame update
     void Start()
@@ -41,7 +50,7 @@ public class Camera : MonoBehaviour
         }
 
 
-
+        //Poruszanie kamerą włącza się gdy trzymamy LPM
         if (Input.GetMouseButton(0) || CameraDistance > 9f)
         {
             isCameraDisabled = false;
@@ -53,7 +62,7 @@ public class Camera : MonoBehaviour
         if (!isCameraDisabled)
         {
             // kamery nie da sie obracac gdy zoom jest mały
-            if(CameraDistance < 8f)
+            if(CameraDistance < 9f)
             {
                 //Rotacja kamery przy pomocy myszki
                 if (Input.GetAxis("Mouse X") != 0 || Input.GetAxis("Mouse Y") != 0)
@@ -91,6 +100,8 @@ public class Camera : MonoBehaviour
 
 
         }
+
+        //Obsługa Scrollowania - przybliżanie, oddalanie
         if (Input.GetAxis("Mouse ScrollWheel") != 0)
         {
             float Scroll = Input.GetAxis("Mouse ScrollWheel") * scrollSensitivity;
@@ -106,6 +117,42 @@ public class Camera : MonoBehaviour
             {
                 CameraDistance = 12f;
             }
+            if(Input.GetAxis("Mouse ScrollWheel") > 0 && CameraDistance < 9f)
+            {
+/*
+                if(this.xcamera.localPosition.x != (Input.mousePosition.x - Screen.width / 2))
+                {
+                    localRotation.x -= (this.xcamera.localPosition.x - (Input.mousePosition.x - Screen.width / 2)) * zoomSensitivity;
+                }
+
+                if(this.xcamera.localPosition.y != (Input.mousePosition.y - Screen.height / 2))
+                {
+                    localRotation.y -= (this.xcamera.localPosition.y - (Input.mousePosition.y - Screen.height / 2)) * zoomSensitivity;
+                }
+          */    
+
+                if (localRotation.y < -10f)
+                {
+                    localRotation.y = -10f;
+                }
+                else if (localRotation.y > 10f)
+                {
+                    localRotation.y = 10f;
+                }
+
+                if (localRotation.x < -10f)
+                {
+                    localRotation.x = -10f;
+                }
+                else if (localRotation.x > 10f)
+                {
+                    localRotation.x = 10f;
+                }
+
+            }
+            
+
+           
         }
 
         //Ustawienie ustawionych wcześniej właściwości na obiekcie kamery
@@ -115,18 +162,11 @@ public class Camera : MonoBehaviour
         if (this.xcamera.localPosition.z != this.CameraDistance * -1f || this.xcamera.localPosition.x != this.localRotation.x 
             || this.xcamera.localPosition.y != this.localRotation.y)
         {
-            if (CameraDistance > 9f) {
-                this.xcamera.localPosition = new Vector3(Mathf.Lerp(this.xcamera.localPosition.x, this.localRotation.x, Time.deltaTime * mouseSensitivity),
-                 Mathf.Lerp(this.xcamera.localPosition.y, this.localRotation.y,
-                 Time.deltaTime * mouseSensitivity), Mathf.Lerp(this.xcamera.localPosition.z, this.CameraDistance * -1f, Time.deltaTime * scrollSpeed));
-            }
-
-            else
-            {
-                this.xcamera.localPosition = new Vector3(this.localRotation.x,
-                    this.localRotation.y,
-                    Mathf.Lerp(this.xcamera.localPosition.z, this.CameraDistance * -1f, Time.deltaTime * scrollSpeed));
-            }
+           
+            this.xcamera.localPosition = new Vector3(Mathf.Lerp(this.xcamera.localPosition.x, this.localRotation.x, Time.deltaTime * mouseSensitivity),
+            Mathf.Lerp(this.xcamera.localPosition.y, this.localRotation.y,
+            Time.deltaTime * mouseSensitivity), Mathf.Lerp(this.xcamera.localPosition.z, this.CameraDistance * -1f, Time.deltaTime * scrollSpeed));
+           
             
         }
 

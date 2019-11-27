@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//dodajcie tu komentarze kurwa...
 public class BoardManager : MonoBehaviour
 {
     public PlayersManager PlayersManager;
@@ -103,5 +105,11 @@ public class BoardManager : MonoBehaviour
             Debug.Log(currentTerritory.gameObject.name + " has been assigned to " + currentPlayer.gameObject.name + "!");
             currentPlayer.AddTerritory(currentTerritory);
         }
+    }
+
+    private IEnumerator NextTour()
+    {
+        //int tura = GameManager.Tura.;
+        yield return null;
     }
 }
