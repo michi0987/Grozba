@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class NewGameMenu : MonoBehaviour
 {
     public void StartNewGame() {
-        PlayerConfig pc = transform.Find("PlayerCountSlider/PlayerConfig").GetComponent<PlayerConfig>();
+        PlayerConfig pc = transform.Find("PlayerConfig").GetComponent<PlayerConfig>();
         if (pc.ValidatePlayerNames()) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             pc.SetPlayerNames();
+            pc.SetPlayerColors();
         } 
     }
 

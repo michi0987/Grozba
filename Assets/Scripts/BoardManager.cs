@@ -18,25 +18,6 @@ public class BoardManager : MonoBehaviour
 
         TerritoriesManager.SetTerritories();
 
-        switch (GM.PlayerCount) {
-            case 6:
-                GM.playerColors.Add(Color.magenta);
-                goto case 5;
-            case 5:
-                GM.playerColors.Add(Color.cyan);
-                goto case 4;
-            case 4:
-                GM.playerColors.Add(Color.green);
-                goto case 3;
-            case 3:
-                GM.playerColors.Add(Color.yellow);
-                goto case 2;
-            case 2:
-                GM.playerColors.Add(Color.blue);
-                GM.playerColors.Add(Color.red);
-                break;
-        }
-
         PlayersManager.CreatePlayers(GM.PlayerCount, GM.playerNames, GM.playerColors);
     }
 
