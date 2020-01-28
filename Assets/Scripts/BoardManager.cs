@@ -30,6 +30,7 @@ public class BoardManager : MonoBehaviour
                 StartCoroutine(ManuallyAssignTerritories());
                 break;
         }
+        GM.round = GameManager.Round.Resources;
     }
 
 

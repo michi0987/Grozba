@@ -39,14 +39,15 @@ public class GameManager
     }
 
     //aktualna tura
-    public enum Tura
+    public enum Round
     {
-        zasoby,
-        przemieszczanie,
-        bitwa
+        Resources,
+        Fight,
+        Move
     }
 
     public AssignmentType TerritoryAssignment;
+    public Round round;
 
     //Nazwy i kolory graczy
     public List<string> playerNames = new List<string>();
