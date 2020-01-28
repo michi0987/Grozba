@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager
 {
     public static GameManager instance = null;
+    public int gameOver = 0;
 
     private GameManager() { }
 

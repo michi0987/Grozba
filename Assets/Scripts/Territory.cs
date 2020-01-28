@@ -9,9 +9,14 @@ public class Territory : MonoBehaviour
     public Territory[] Neighoburs;
     public Player Owner;
     public TerritoriesManager Manager;
+    public int resources;
 
     public Color standardColor;
 
+    public Territory()
+    {
+        this.resources = 0;
+    }
 
     private void OnMouseDown()
     {
