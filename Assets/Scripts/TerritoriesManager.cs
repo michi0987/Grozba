@@ -11,6 +11,7 @@ public class TerritoriesManager : MonoBehaviour
 
 
     public Color hoverColor = new Color(0, 0, 0, 255);
+    public Color attackColor = new Color(255, 255, 255, 255);
    
 
     public void SetTerritories()

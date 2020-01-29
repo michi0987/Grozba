@@ -10,11 +10,13 @@ public class Territory : MonoBehaviour
     public Player Owner;
     public TerritoriesManager Manager;
     public int resources;
+    public bool attack;
 
     public Color standardColor;
 
     public Territory()
     {
+        this.attack = false;
         this.resources = 0;
     }
 
@@ -32,6 +34,14 @@ public class Territory : MonoBehaviour
 
     private void OnMouseExit()
     {
-        GetComponent<SpriteRenderer>().color = standardColor;
+        if (!this.attack)
+        {
+            GetComponent<SpriteRenderer>().color = standardColor;
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Manager.attackColor; 
+        }
+        
     }
 }

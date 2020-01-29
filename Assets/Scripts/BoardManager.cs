@@ -36,10 +36,15 @@ public class BoardManager : MonoBehaviour
         
         
     }
-  
 
-
-
+    public void EndAttack()
+    {
+        if(GM.round == GameManager.Round.Fight)
+        {
+            GM.round = GameManager.Round.Move;
+        }
+        
+    }
     private void RandomAssignTerritories()
     {
         List<int> used = new List<int>();
@@ -116,10 +121,24 @@ public class BoardManager : MonoBehaviour
                         yield return null;
                     }
                     Debug.Log("Wyszedlem z resources");
+                    GM.round = GameManager.Round.Fight;
                     break;
                 case GameManager.Round.Fight:
+                    Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
+                    Territory destinationTerritory = null;
+                    Territory attackingTerritory = null;
+                    do
+                    {
+                        destinationTerritory = TerritoriesManager.GetActiveTerritory();
+                        yield return null;
+                    }
+                    while (destinationTerritory == null || destinationTerritory.Owner == PlayersManager.Players[activePlayer]);
+                    destinationTerritory.attack = true;
+
+
                     break;
                 case GameManager.Round.Move:
+                    Debug.Log("Zaczynam runde Move");
                     break;
             }
             Debug.Log("PlayerCount " + GM.PlayerCount);
