@@ -31,7 +31,7 @@ public class BoardManager : MonoBehaviour
                 break;
         }
         GM.round = GameManager.Round.Resources;
-        StartCoroutine(NextTour());
+        StartCoroutine(GM.NextTour(PlayersManager, TerritoriesManager));
 
         
         
@@ -93,62 +93,5 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    private IEnumerator NextTour()
-    {
-        int activePlayer = 0;
-        while(GM.gameOver != 1)
-        {
-
-            switch (GM.round)
-            {
-                case GameManager.Round.Resources:
-                    PlayersManager.Players[activePlayer].freeResources = PlayersManager.Players[activePlayer].Territories.Count;
-                    Debug.Log("freeResources for player" + activePlayer + ": " + PlayersManager.Players[activePlayer].freeResources);
-
-                    Territory currentTerritory;
-                    while(PlayersManager.Players[activePlayer].freeResources > 0)
-                    {
-                        do
-                        {
-                            currentTerritory = TerritoriesManager.GetActiveTerritory();
-                            yield return null;
-                        }
-                        while (currentTerritory == null || currentTerritory.Owner != PlayersManager.Players[activePlayer]);
-                        currentTerritory.resources += 1;
-                        PlayersManager.Players[activePlayer].freeResources -= 1;
-                        Debug.Log("Dodano resources do terotorium. Terytorium ma teraz zasobow: " + currentTerritory.resources);
-
-                        yield return null;
-                    }
-                    Debug.Log("Wyszedlem z resources");
-                    GM.round = GameManager.Round.Fight;
-                    break;
-                case GameManager.Round.Fight:
-                    Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
-                    Territory destinationTerritory = null;
-                    Territory attackingTerritory = null;
-                    do
-                    {
-                        destinationTerritory = TerritoriesManager.GetActiveTerritory();
-                        yield return null;
-                    }
-                    while (destinationTerritory == null || destinationTerritory.Owner != PlayersManager.Players[activePlayer]);
-                    destinationTerritory.attack = true;
-
-
-                    break;
-                case GameManager.Round.Move:
-                    Debug.Log("Zaczynam runde Move");
-                    break;
-            }
-            Debug.Log("PlayerCount " + GM.PlayerCount);
-            activePlayer += 1;
-            activePlayer = activePlayer % GM.PlayerCount;
-            Debug.Log("activePlayer = " + activePlayer);
-            yield return null;
-        }
-        
-        //int tura = GameManager.Tura.;
-        
-    }
+    
 }
