@@ -132,7 +132,7 @@ public class BoardManager : MonoBehaviour
                         destinationTerritory = TerritoriesManager.GetActiveTerritory();
                         yield return null;
                     }
-                    while (destinationTerritory == null || destinationTerritory.Owner == PlayersManager.Players[activePlayer]);
+                    while (destinationTerritory == null || destinationTerritory.Owner != PlayersManager.Players[activePlayer]);
                     destinationTerritory.attack = true;
 
 
