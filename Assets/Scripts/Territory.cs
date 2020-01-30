@@ -34,14 +34,9 @@ public class Territory : MonoBehaviour
 
     private void OnMouseExit()
     {
-        if (!this.attack)
-        {
-            GetComponent<SpriteRenderer>().color = standardColor;
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = Manager.attackColor; 
-        }
+       
+        GetComponent<SpriteRenderer>().color = standardColor;
+       
         
     }
 }

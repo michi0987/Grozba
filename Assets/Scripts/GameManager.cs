@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -52,6 +53,7 @@ public class GameManager
     public IEnumerator NextTour(PlayersManager playersManager, TerritoriesManager territoriesManager)
     {
         int activePlayer = 0;
+        int attacking_territories = 0;
         while (gameOver != 1)
         {
 
@@ -89,9 +91,37 @@ public class GameManager
                         yield return null;
                     }
                     while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer]);
-                    destinationTerritory.attack = true;
+                    destinationTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackColor;
+                    Debug.Log("destinationTerritory = " + destinationTerritory);
 
+                    //Teraz wybieramy z którego terytorium chcemy zaatakować
+                    int checkNeigbours = 0;
+                    attackingTerritory = null;
+                    while (attackingTerritory == null || attackingTerritory.Owner == playersManager.Players[activePlayer] || checkNeigbours == 0)
+                    {
+                        attackingTerritory = territoriesManager.GetActiveTerritory();
+                        yield return null;
 
+                        if (attackingTerritory == null) continue;
+                        try
+                        {
+                            for (int neighboursIterator = 0; neighboursIterator < attackingTerritory.Neighoburs.Length; neighboursIterator++)
+                            {
+                                if (attackingTerritory.Neighoburs[neighboursIterator] == destinationTerritory) checkNeigbours = 1;
+                                else checkNeigbours = 0;
+                            }
+                        }
+                        catch(NullReferenceException e)
+                        {
+                            Debug.Log("Nie ma sasiadow");
+                        }
+                      
+
+                    }
+                    
+                    attackingTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackingColor;
+
+                    Debug.Log("attackingTerritory = " + attackingTerritory);
                     break;
                 case GameManager.Round.Move:
                     Debug.Log("Zaczynam runde Move");
