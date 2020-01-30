@@ -54,6 +54,10 @@ public class GameManager
     {
         int activePlayer = 0;
         int attacking_territories = 0;
+
+        for(int i = 0; i< territoriesManager.Territories.Count; i++) {
+            territoriesManager.Territories[i].resources = 1;
+        }
         while (gameOver != 1)
         {
 
@@ -85,12 +89,26 @@ public class GameManager
                     Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
                     Territory destinationTerritory = null;
                     Territory attackingTerritory = null;
-                    do
+                    int activePlayerAround = 0;
+                    while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer] || activePlayerAround != 1) 
                     {
                         destinationTerritory = territoriesManager.GetActiveTerritory();
                         yield return null;
+                        if (destinationTerritory == null) continue;
+                        try {
+                            for (int neighboursIterator = 0; neighboursIterator < destinationTerritory.Neighoburs.Length; neighboursIterator++)
+                            {
+                                if (destinationTerritory.Neighoburs[neighboursIterator].Owner == playersManager.Players[activePlayer]) activePlayerAround = 1;
+                                Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " Owner: " + destinationTerritory.Neighoburs[neighboursIterator].Owner);
+                            }
+                        }
+                        catch (NullReferenceException e)
+                        {
+                            Debug.Log("Nie ma sasiadow");
+                        }
+                        
                     }
-                    while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer]);
+                    
                     destinationTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackColor;
                     Debug.Log("destinationTerritory = " + destinationTerritory);
 
