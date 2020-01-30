@@ -47,6 +47,8 @@ public class GameManager
         Move
     }
 
+
+
     public IEnumerator NextTour(PlayersManager playersManager, TerritoriesManager territoriesManager)
     {
         int activePlayer = 0;

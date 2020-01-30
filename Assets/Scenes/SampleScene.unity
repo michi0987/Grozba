@@ -8510,7 +8510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1798825399}
+      - m_Target: {fileID: 1960158972}
         m_MethodName: EndAttack
         m_Mode: 1
         m_Arguments:
@@ -8569,8 +8569,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8fdb4b20beaa64c933175e0414d98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayersManager: {fileID: 0}
-  TerritoriesManager: {fileID: 0}
+  PlayersManager: {fileID: 1958096785}
+  TerritoriesManager: {fileID: 1357400861}
 --- !u!1 &1843592425
 GameObject:
   m_ObjectHideFlags: 0
