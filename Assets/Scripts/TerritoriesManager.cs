@@ -14,7 +14,6 @@ public class TerritoriesManager : MonoBehaviour
     public Color attackColor = new Color(200, 20, 140, 255);
     public Color attackingColor = new Color(20, 200, 120, 200);
    
-
     public void SetTerritories()
     {
         foreach(Transform child in transform)

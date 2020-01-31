@@ -9,15 +9,23 @@ public class Territory : MonoBehaviour
     public Territory[] Neighoburs;
     public Player Owner;
     public TerritoriesManager Manager;
-    public int resources;
+    public ResourceTagController resourceTagController;
+    private int Resources;
+    public int resources { get => Resources; 
+        set {         
+            resourceTagController.setNumber(value);
+            Resources = value;
+        } 
+    }
     public bool attack;
 
     public Color standardColor;
 
-    public Territory()
+    private void Start()
     {
+        resourceTagController = this.gameObject.GetComponentInChildren<ResourceTagController>();
         this.attack = false;
-        this.resources = 0;
+        this.resources = 1;
     }
 
     private void OnMouseDown()
