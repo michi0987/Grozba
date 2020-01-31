@@ -97,18 +97,13 @@ public class GameManager
                         yield return null;
                     }
                     Debug.Log("Wyszedlem z resources");
-                    round = GameManager.Round.Move;
+                    round = GameManager.Round.Fight;
                     break;
                 case GameManager.Round.Fight:
-<<<<<<< HEAD
                     Debug.Log("Player: " + playersManager.Players[activePlayer]);
                     if (round != Round.Fight) break;
                     int defending_resources = 0;
-            
-=======
-                    
-                    attacking_resources = 0;
->>>>>>> a032e716551afe6ff655141273a3c81491b5d2a8
+
                     attackButton = 0;
                     Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
                     Territory destinationTerritory = null;
@@ -124,10 +119,10 @@ public class GameManager
                         {
                             for (int neighboursIterator = 0; neighboursIterator < destinationTerritory.Neighoburs.Length; neighboursIterator++)
                             {
-                                
+
                                 if (destinationTerritory.Neighoburs[neighboursIterator].Owner != playersManager.Players[activePlayer]) activePlayerAround = 1;
-                               // Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
-                               //    + " " + playersManager.Players[activePlayer] + " activeplayerAr = " + activePlayerAround);
+                                // Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
+                                //    + " " + playersManager.Players[activePlayer] + " activeplayerAr = " + activePlayerAround);
                             }
                         }
                         catch (NullReferenceException e)
@@ -146,7 +141,7 @@ public class GameManager
                     {
                         int checkNeigbours = 0;
                         attackingTerritory = null;
-                        while (attackingTerritory == null || attackingTerritory.Owner != playersManager.Players[activePlayer] || checkNeigbours == 0 
+                        while (attackingTerritory == null || attackingTerritory.Owner != playersManager.Players[activePlayer] || checkNeigbours == 0
                             || attackingTerritory.resources < 2)
                         {
                             attackingTerritory = territoriesManager.GetActiveTerritory();
@@ -190,7 +185,7 @@ public class GameManager
                     if (wynik != "null")
                     {
                         lostDef = wynik.Substring(0, wynik.LastIndexOf('/'));
-                        lostAtt = wynik.Substring(wynik.LastIndexOf('/')+1);
+                        lostAtt = wynik.Substring(wynik.LastIndexOf('/') + 1);
                         Debug.Log("lostdef " + lostDef);
                         Debug.Log("lostAtt " + lostAtt);
                     }
@@ -211,10 +206,12 @@ public class GameManager
 
                     }
 
-                    
+
+
+
                     break;
                 case GameManager.Round.Move:
-<<<<<<< HEAD
+
                     Debug.Log("Zaczynam runde Move");
 
 
@@ -229,7 +226,7 @@ public class GameManager
                     activePlayer += 1;
                     activePlayer = activePlayer % PlayerCount;
                     Debug.Log("activePlayer = " + activePlayer);
-=======
+
                     Debug.Log("MOVE");
                     Boolean neighbour = false;
                     Territory fromTerritory;
@@ -272,7 +269,7 @@ public class GameManager
                     activePlayer = activePlayer % PlayerCount;
                     Debug.Log("activePlayer = " + activePlayer);
                     round = GameManager.Round.Resources;
->>>>>>> a032e716551afe6ff655141273a3c81491b5d2a8
+
                     yield return null;
                     break;
             }
