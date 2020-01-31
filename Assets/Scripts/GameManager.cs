@@ -97,13 +97,18 @@ public class GameManager
                         yield return null;
                     }
                     Debug.Log("Wyszedlem z resources");
-                    round = GameManager.Round.Fight;
+                    round = GameManager.Round.Move;
                     break;
                 case GameManager.Round.Fight:
+<<<<<<< HEAD
                     Debug.Log("Player: " + playersManager.Players[activePlayer]);
                     if (round != Round.Fight) break;
                     int defending_resources = 0;
             
+=======
+                    
+                    attacking_resources = 0;
+>>>>>>> a032e716551afe6ff655141273a3c81491b5d2a8
                     attackButton = 0;
                     Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
                     Territory destinationTerritory = null;
@@ -206,11 +211,10 @@ public class GameManager
 
                     }
 
-
-
                     
                     break;
                 case GameManager.Round.Move:
+<<<<<<< HEAD
                     Debug.Log("Zaczynam runde Move");
 
 
@@ -225,6 +229,50 @@ public class GameManager
                     activePlayer += 1;
                     activePlayer = activePlayer % PlayerCount;
                     Debug.Log("activePlayer = " + activePlayer);
+=======
+                    Debug.Log("MOVE");
+                    Boolean neighbour = false;
+                    Territory fromTerritory;
+                    do
+                    {
+                        fromTerritory = territoriesManager.GetActiveTerritory();
+                        yield return null;
+                    }
+                    while (fromTerritory == null || fromTerritory.Owner != playersManager.Players[activePlayer]);
+                    Debug.Log("from: " + fromTerritory);
+
+                    //tutaj pownien pytać ile jednostek chce przenieść
+                    //ale że nie ma czasu tego ogarniać to zakładam, że wszystko
+                    int armyMoveCount = fromTerritory.resources - 1;
+
+                    Territory toTerritory;
+                    do
+                    {
+                        toTerritory = territoriesManager.GetActiveTerritory();
+                        yield return null;
+
+                        if (toTerritory == null) continue;
+                        else
+                        {
+                            for (int neighboursIterator = 0; neighboursIterator < fromTerritory.Neighoburs.Length; neighboursIterator++)
+                            {
+                                if (fromTerritory.Neighoburs[neighboursIterator] == toTerritory)
+                                    neighbour = true;
+                            }
+                        }
+                    }
+                    while (toTerritory == null || toTerritory.Owner != playersManager.Players[activePlayer] || !neighbour);
+                    Debug.Log("to: " + toTerritory);
+                    fromTerritory.resources -= armyMoveCount;
+                    toTerritory.resources += armyMoveCount;
+
+
+                    Debug.Log("PlayerCount " + PlayerCount);
+                    activePlayer += 1;
+                    activePlayer = activePlayer % PlayerCount;
+                    Debug.Log("activePlayer = " + activePlayer);
+                    round = GameManager.Round.Resources;
+>>>>>>> a032e716551afe6ff655141273a3c81491b5d2a8
                     yield return null;
                     break;
             }
