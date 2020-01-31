@@ -11,10 +11,12 @@ public class GameManager
 
     private GameManager() { }
 
-    public static GameManager Instance {
-        get {
-            if(instance==null) instance = new GameManager();
- 
+    public static GameManager Instance
+    {
+        get
+        {
+            if (instance == null) instance = new GameManager();
+
             return instance;
         }
     }
@@ -22,13 +24,16 @@ public class GameManager
     //Liczba graczy
     private int playerCount = 2;
 
-    
 
-    public int PlayerCount {
-        get {
+
+    public int PlayerCount
+    {
+        get
+        {
             return playerCount;
         }
-        set {
+        set
+        {
             if (value > 6 || value < 2) return;
             else playerCount = value;
             Debug.Log("Ustawiono " + playerCount + " graczy");
@@ -36,7 +41,8 @@ public class GameManager
     }
 
     //Przydzielanie terytorium
-    public enum AssignmentType { 
+    public enum AssignmentType
+    {
         manual,
         random
     }
@@ -57,7 +63,8 @@ public class GameManager
         int activePlayer = 0;
         int attacking_resources = 0;
 
-        for(int i = 0; i< territoriesManager.Territories.Count; i++) {
+        for (int i = 0; i < territoriesManager.Territories.Count; i++)
+        {
             territoriesManager.Territories[i].resources = 1;
         }
         while (gameOver != 1)
@@ -99,32 +106,33 @@ public class GameManager
                     Territory destinationTerritory = null;
                     Territory attackingTerritory = null;
                     int activePlayerAround = 0;
-                    while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer] || activePlayerAround != 1) 
+                    while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer] || activePlayerAround != 1)
                     {
                         destinationTerritory = territoriesManager.GetActiveTerritory();
                         yield return null;
                         if (destinationTerritory == null) continue;
-                        try {
+                        try
+                        {
                             for (int neighboursIterator = 0; neighboursIterator < destinationTerritory.Neighoburs.Length; neighboursIterator++)
                             {
                                 //Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
-                                 //   + " " + playersManager.Players[activePlayer]);
+                                //   + " " + playersManager.Players[activePlayer]);
                                 if (destinationTerritory.Neighoburs[neighboursIterator].Owner != playersManager.Players[activePlayer]) activePlayerAround = 1;
-                                
+
                             }
                         }
                         catch (NullReferenceException e)
                         {
                             Debug.Log("Nie ma sasiadow");
                         }
-                        
+
                     }
-                    
+
                     destinationTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackColor;
                     Debug.Log("destinationTerritory = " + destinationTerritory);
 
                     //Teraz wybieramy z którego terytorium chcemy zaatakować
-                    while(attackButton == 0)
+                    while (attackButton == 0)
                     {
                         int checkNeigbours = 0;
                         attackingTerritory = null;
@@ -156,13 +164,14 @@ public class GameManager
 
 
                         }
-                    }
-                    
-                    
-                    
-                    attackingTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackingColor;
+                        attackingTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackingColor;
 
-                    Debug.Log("attackingTerritory = " + attackingTerritory);
+                        Debug.Log("attackingTerritory = " + attackingTerritory + " AT res = " + attacking_resources + " AT.r = " + attackingTerritory.resources);
+                    }
+
+
+
+                    
                     break;
                 case GameManager.Round.Move:
                     Debug.Log("Zaczynam runde Move");

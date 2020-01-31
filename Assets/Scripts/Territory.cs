@@ -10,13 +10,20 @@ public class Territory : MonoBehaviour
     public Player Owner;
     public TerritoriesManager Manager;
     public ResourceTagController resourceTagController;
-    private int Resources;
-    public int resources { get => Resources; 
+    public int resources;
+
+    public Territory()
+    {
+        this.resources = 0;
+    }
+
+  /*  public int resources { get => Resources; 
         set {         
             resourceTagController.setNumber(value);
             Resources = value;
         } 
     }
+    */
     public bool attack;
 
     public Color standardColor;
