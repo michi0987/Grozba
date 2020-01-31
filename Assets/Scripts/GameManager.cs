@@ -7,6 +7,7 @@ public class GameManager
 {
     public static GameManager instance = null;
     public int gameOver = 0;
+    public int zakonczonoPrzydzielanie = 0;
 
     private GameManager() { }
 
@@ -52,15 +53,21 @@ public class GameManager
 
     public IEnumerator NextTour(PlayersManager playersManager, TerritoriesManager territoriesManager)
     {
+        int attackButton = 0;
         int activePlayer = 0;
-        int attacking_territories = 0;
+        int attacking_resources = 0;
 
         for(int i = 0; i< territoriesManager.Territories.Count; i++) {
             territoriesManager.Territories[i].resources = 1;
         }
         while (gameOver != 1)
         {
-
+            /*while(zakonczonoPrzydzielanie == 0)
+            {
+                yield return null;
+            }
+            */
+            Debug.Log("Wchodze tu");
             switch (round)
             {
                 case GameManager.Round.Resources:
@@ -86,6 +93,8 @@ public class GameManager
                     round = GameManager.Round.Fight;
                     break;
                 case GameManager.Round.Fight:
+                    attacking_resources = 0;
+                    attackButton = 0;
                     Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
                     Territory destinationTerritory = null;
                     Territory attackingTerritory = null;
@@ -98,8 +107,10 @@ public class GameManager
                         try {
                             for (int neighboursIterator = 0; neighboursIterator < destinationTerritory.Neighoburs.Length; neighboursIterator++)
                             {
-                                if (destinationTerritory.Neighoburs[neighboursIterator].Owner == playersManager.Players[activePlayer]) activePlayerAround = 1;
-                                Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " Owner: " + destinationTerritory.Neighoburs[neighboursIterator].Owner);
+                                //Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
+                                 //   + " " + playersManager.Players[activePlayer]);
+                                if (destinationTerritory.Neighoburs[neighboursIterator].Owner != playersManager.Players[activePlayer]) activePlayerAround = 1;
+                                
                             }
                         }
                         catch (NullReferenceException e)
@@ -113,29 +124,41 @@ public class GameManager
                     Debug.Log("destinationTerritory = " + destinationTerritory);
 
                     //Teraz wybieramy z którego terytorium chcemy zaatakować
-                    int checkNeigbours = 0;
-                    attackingTerritory = null;
-                    while (attackingTerritory == null || attackingTerritory.Owner == playersManager.Players[activePlayer] || checkNeigbours == 0)
+                    while(attackButton == 0)
                     {
-                        attackingTerritory = territoriesManager.GetActiveTerritory();
-                        yield return null;
-
-                        if (attackingTerritory == null) continue;
-                        try
+                        int checkNeigbours = 0;
+                        attackingTerritory = null;
+                        while (attackingTerritory == null || attackingTerritory.Owner == playersManager.Players[activePlayer] || checkNeigbours == 0)
                         {
-                            for (int neighboursIterator = 0; neighboursIterator < attackingTerritory.Neighoburs.Length; neighboursIterator++)
+                            attackingTerritory = territoriesManager.GetActiveTerritory();
+                            yield return null;
+
+                            if (attackingTerritory == null) continue;
+                            try
                             {
-                                if (attackingTerritory.Neighoburs[neighboursIterator] == destinationTerritory) checkNeigbours = 1;
-                                else checkNeigbours = 0;
-                            }
-                        }
-                        catch(NullReferenceException e)
-                        {
-                            Debug.Log("Nie ma sasiadow");
-                        }
-                      
+                                for (int neighboursIterator = 0; neighboursIterator < attackingTerritory.Neighoburs.Length; neighboursIterator++)
+                                {
+                                    if (attackingTerritory.Neighoburs[neighboursIterator] == destinationTerritory) checkNeigbours = 1;
 
+                                    //Debug.Log(attackingTerritory.Neighoburs[neighboursIterator] + " /// " + destinationTerritory + " checkNe: " + checkNeigbours);
+
+                                }
+                            }
+                            catch (NullReferenceException e)
+                            {
+                                Debug.Log("Nie ma sasiadow");
+                            }
+                            if (attackingTerritory.resources > 1)
+                            {
+                                attackingTerritory.resources--;
+                                attacking_resources++;
+                            }
+
+
+                        }
                     }
+                    
+                    
                     
                     attackingTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackingColor;
 
