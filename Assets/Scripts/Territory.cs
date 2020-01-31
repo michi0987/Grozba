@@ -10,27 +10,30 @@ public class Territory : MonoBehaviour
     public Player Owner;
     public TerritoriesManager Manager;
     public ResourceTagController resourceTagController;
-    public int resources;
-
+    public int Resources = 1;
+    /*
     public Territory()
     {
         this.resources = 0;
     }
-
-  /*  public int resources { get => Resources; 
+    */
+    public int resources { get => Resources; 
         set {         
             resourceTagController.setNumber(value);
             Resources = value;
         } 
     }
-    */
+    
     public bool attack;
 
     public Color standardColor;
+    private void Awake()
+    {
+        resourceTagController = this.gameObject.GetComponentInChildren<ResourceTagController>();
+    }
 
     private void Start()
     {
-        resourceTagController = this.gameObject.GetComponentInChildren<ResourceTagController>();
         this.attack = false;
         this.resources = 1;
     }
