@@ -50,6 +50,7 @@ public class GameManager
     //aktualna tura
     public enum Round
     {
+        Start,
         Resources,
         Fight,
         Move
@@ -77,6 +78,41 @@ public class GameManager
             Debug.Log("Wchodze tu");
             switch (round)
             {
+                case GameManager.Round.Start:
+
+                    //Rozdawanie zasobow na poczatek
+                    for(int i =0; i<playerCount; i++)
+                    {
+                        Debug.Log("gracz nr " + i);
+                        int startResources = 35 - playerCount * 5;
+
+                        Territory startTerritory;
+                        while (startResources > 0)
+                        {
+                            do
+                            {
+                                startTerritory = territoriesManager.GetActiveTerritory();
+                                yield return null;
+                            }
+                            while (startTerritory == null || startTerritory.Owner != playersManager.Players[activePlayer]);
+                            startTerritory.resources += 1;
+                            startResources -= 1;
+                            Debug.Log("Dodano resources do terotorium. Terytorium ma teraz zasobow: " + startTerritory.resources);
+
+                            yield return null;
+                        }
+                        Debug.Log("PlayerCount " + PlayerCount);
+                        activePlayer += 1;
+                        activePlayer = activePlayer % PlayerCount;
+                        Debug.Log("activePlayer = " + activePlayer);
+                       
+
+                    }
+                    Debug.Log("Wyszedlem ze startu");
+
+                    round = Round.Resources;
+                    activePlayer = 0;
+                    break;
                 case GameManager.Round.Resources:
                     playersManager.Players[activePlayer].freeResources = playersManager.Players[activePlayer].Territories.Count;
                     Debug.Log("freeResources for player" + activePlayer + ": " + playersManager.Players[activePlayer].freeResources);
@@ -132,8 +168,8 @@ public class GameManager
 
                     }
                     if (round != Round.Fight) break;
-
-                    destinationTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackColor;
+                    Color attackColor = new Color(200, 30, 80, 100);
+                    destinationTerritory.standardColor = attackColor;
                     Debug.Log("destinationTerritory = " + destinationTerritory);
 
                     //Teraz wybieramy z którego terytorium chcemy zaatakować
@@ -203,7 +239,9 @@ public class GameManager
                     }
                     else
                     {
-
+                        destinationTerritory.standardColor = destinationTerritory.Owner.Color;
+                        attackingTerritory.resources += attacking_resources;
+                        attacking_resources = 0;
                     }
 
 
@@ -213,19 +251,7 @@ public class GameManager
                 case GameManager.Round.Move:
 
                     Debug.Log("Zaczynam runde Move");
-
-
-
-
-
-
-
-
-
-                    Debug.Log("Przelaczam na gracza " + PlayerCount);
-                    activePlayer += 1;
-                    activePlayer = activePlayer % PlayerCount;
-                    Debug.Log("activePlayer = " + activePlayer);
+                    
 
                     Debug.Log("MOVE");
                     Boolean neighbour = false;

@@ -33,7 +33,7 @@ public class BoardManager : MonoBehaviour
                 break;
         }
         Debug.Log("Wchodze tu");
-        GM.round = GameManager.Round.Resources;
+        GM.round = GameManager.Round.Start;
         StartCoroutine(GM.NextTour(PlayersManager, TerritoriesManager));
 
         
