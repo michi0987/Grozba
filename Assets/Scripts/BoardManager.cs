@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 
@@ -10,6 +11,7 @@ public class BoardManager : MonoBehaviour
     public TerritoriesManager TerritoriesManager;
 
     private GameManager GM = GameManager.Instance;
+
 
     void Awake()
     {
@@ -38,6 +40,62 @@ public class BoardManager : MonoBehaviour
         
     }
 
+    public void ThrowCubes(int attackerResources, int defenderResources)
+    {
+
+        List<int> attackerThrows = new List<int>();
+        List<int> defenderThrows = new List<int>();
+
+        if (attackerResources <= 0 || defenderResources <= 0)
+        {
+            //Żadne jednostki nie walczą
+            return;
+        }
+
+        for (int attCubeThrow = 0; attCubeThrow < attackerResources && attCubeThrow < 3; attCubeThrow++) { attackerThrows.Add(GetRandomNumber()); }
+        for (int defCubeThrow = 0; defCubeThrow < defenderResources && defCubeThrow < 2; defCubeThrow++) { defenderThrows.Add(GetRandomNumber()); }
+
+        int timesOfComparisons = Math.Min(attackerResources, defenderResources);
+        int attackerWins = 0;
+        int defenderWins = 0;
+
+        for(int comparison = 0; comparison < timesOfComparisons; comparison++)
+        {
+            int maxAttackerThrow = 0;
+            foreach (int atThrow in attackerThrows) { if (maxAttackerThrow < atThrow) maxAttackerThrow = atThrow; }
+            attackerThrows.Remove(maxAttackerThrow);
+
+            int maxDefenderThrow = 0;
+            foreach (int defThrow in defenderThrows) { if (maxDefenderThrow < defThrow) maxDefenderThrow = defThrow; }
+            defenderThrows.Remove(maxDefenderThrow);
+
+            if (maxAttackerThrow == maxDefenderThrow) defenderWins++;
+            else if (maxAttackerThrow > maxDefenderThrow) attackerWins++;
+            else defenderWins++;
+
+        }
+
+        // attackerWins - liczba wygranych przez atakującego
+        // defenderWins - -||- obraniającego
+
+
+        return;
+
+
+
+
+    }
+
+    public void MetodaKtoraJestPustaOk()
+    {
+
+    }
+
+    private int GetRandomNumber()
+    {
+        return UnityEngine.Random.Range(1, 6);
+    }
+
     public void EndAttack()
     {
         if(GM.round == GameManager.Round.Fight)
@@ -61,7 +119,7 @@ public class BoardManager : MonoBehaviour
             {
                 if (used.Count != 0)
                 {
-                    int rand = used[Random.Range(0, used.Count)];
+                    int rand = used[UnityEngine.Random.Range(0, used.Count)];
                     used.Remove(rand);
                     player.AddTerritory(TerritoriesManager.Territories[rand]);
                 }

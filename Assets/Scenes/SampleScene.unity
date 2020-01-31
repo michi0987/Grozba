@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -532,6 +532,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &68830610
@@ -695,6 +696,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &72146740
@@ -961,6 +963,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &130987357
@@ -1250,6 +1253,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &177149122
@@ -1514,6 +1518,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &188995272
@@ -1761,6 +1766,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &364867169
@@ -2014,6 +2020,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &382263995
@@ -2312,6 +2319,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &398736586
@@ -2500,6 +2508,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &439157090
@@ -2718,6 +2727,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &449195682
@@ -2912,6 +2922,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &498056453
@@ -3088,6 +3099,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &505054474
@@ -3371,6 +3383,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &558454594
@@ -3946,6 +3959,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &626963776
@@ -4092,6 +4106,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &662666063
@@ -4266,6 +4281,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &668136620
@@ -4529,6 +4545,150 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 688669318}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &691144218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691144219}
+  - component: {fileID: 691144222}
+  - component: {fileID: 691144221}
+  - component: {fileID: 691144220}
+  - component: {fileID: 691144223}
+  m_Layer: 5
+  m_Name: BeginBattleButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &691144219
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691144218}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1456552577}
+  m_Father: {fileID: 997012321}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 376.5, y: -224.85}
+  m_SizeDelta: {x: 167, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &691144220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691144218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 691144221}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1960158970}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &691144221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691144218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &691144222
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691144218}
+  m_CullTransparentMesh: 0
+--- !u!114 &691144223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691144218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8fdb4b20beaa64c933175e0414d98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayersManager: {fileID: 0}
+  TerritoriesManager: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5148,6 +5308,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1798825395}
+  - {fileID: 1664271450}
+  - {fileID: 691144219}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5816,6 +5978,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1102662849
@@ -5991,6 +6154,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1187797839
@@ -6687,6 +6851,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1251158372
@@ -7165,6 +7330,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1315705505
@@ -7375,6 +7541,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1354561722
@@ -7791,6 +7958,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1393463002
@@ -8157,6 +8325,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1419878290
@@ -8348,6 +8517,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1446804626
@@ -8400,6 +8570,83 @@ PolygonCollider2D:
       - {x: 0.59, y: -0.685}
       - {x: 0.59, y: -0.415}
       - {x: 0.55, y: -0.315}
+--- !u!1 &1456552576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1456552577}
+  - component: {fileID: 1456552579}
+  - component: {fileID: 1456552578}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1456552577
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456552576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 691144219}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1456552578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456552576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Rozpocznij Walke
+--- !u!222 &1456552579
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456552576}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1464513808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8611,6 +8858,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1483718169
@@ -8799,6 +9047,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1490642168
@@ -9076,6 +9325,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1500840938
@@ -9384,6 +9634,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1527711501
@@ -9540,6 +9791,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1531388779
@@ -10016,6 +10268,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1610032730
@@ -10166,6 +10419,138 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &1664271449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664271450}
+  - component: {fileID: 1664271453}
+  - component: {fileID: 1664271452}
+  - component: {fileID: 1664271451}
+  - component: {fileID: 1664271454}
+  m_Layer: 5
+  m_Name: RollDiceButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1664271450
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 997012321}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 544, y: -248}
+  m_SizeDelta: {x: 134.4, y: 76.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1664271451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1664271452}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1664271452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: fd242e801f2f92240a00bf8feccf952c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1664271453
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271449}
+  m_CullTransparentMesh: 0
+--- !u!114 &1664271454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664271449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b8fdb4b20beaa64c933175e0414d98c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayersManager: {fileID: 0}
+  TerritoriesManager: {fileID: 0}
 --- !u!1001 &1664826941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10480,6 +10865,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1668570965
@@ -10642,6 +11028,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1686713366
@@ -10812,6 +11199,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1696551207
@@ -11181,6 +11569,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1743022499
@@ -11339,6 +11728,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1744354082
@@ -11594,6 +11984,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1762818091
@@ -11868,6 +12259,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1785985635
@@ -12390,6 +12782,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1843592429
@@ -13172,6 +13565,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1942730152
@@ -13328,6 +13722,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1945325943
@@ -13597,6 +13992,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &1965808620
@@ -13983,6 +14379,7 @@ MonoBehaviour:
   Owner: {fileID: 0}
   Manager: {fileID: 0}
   resourceTagController: {fileID: 0}
+  resources: 0
   attack: 0
   standardColor: {r: 255, g: 255, b: 255, a: 255}
 --- !u!60 &2057990987
