@@ -40,7 +40,7 @@ public class BoardManager : MonoBehaviour
         
     }
 
-    public void ThrowCubes(int attackerResources, int defenderResources)
+    public static String ThrowCubes(int attackerResources, int defenderResources)
     {
 
         List<int> attackerThrows = new List<int>();
@@ -49,11 +49,11 @@ public class BoardManager : MonoBehaviour
         if (attackerResources <= 0 || defenderResources <= 0)
         {
             //Żadne jednostki nie walczą
-            return;
+            return "null";
         }
 
-        for (int attCubeThrow = 0; attCubeThrow < attackerResources && attCubeThrow < 3; attCubeThrow++) { attackerThrows.Add(GetRandomNumber()); }
-        for (int defCubeThrow = 0; defCubeThrow < defenderResources && defCubeThrow < 2; defCubeThrow++) { defenderThrows.Add(GetRandomNumber()); }
+        for (int attCubeThrow = 0; attCubeThrow < attackerResources && attCubeThrow < 3; attCubeThrow++) { attackerThrows.Add(UnityEngine.Random.Range(1, 6)); }
+        for (int defCubeThrow = 0; defCubeThrow < defenderResources && defCubeThrow < 2; defCubeThrow++) { defenderThrows.Add(UnityEngine.Random.Range(1, 6)); }
 
         int timesOfComparisons = Math.Min(attackerResources, defenderResources);
         int attackerWins = 0;
@@ -77,18 +77,22 @@ public class BoardManager : MonoBehaviour
 
         // attackerWins - liczba wygranych przez atakującego
         // defenderWins - -||- obraniającego
+        string at_df = attackerWins.ToString();
+        at_df += "/";
+        at_df += defenderWins.ToString();
 
-
-        return;
-
-
+        return at_df;
 
 
     }
 
     public void MetodaKtoraJestPustaOk()
     {
-
+        if(GM.round == GameManager.Round.Fight)
+        {
+            GM.attackButton = 1;
+        }
+        
     }
 
     private int GetRandomNumber()

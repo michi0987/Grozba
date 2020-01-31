@@ -55,11 +55,11 @@ public class GameManager
         Move
     }
 
-
+    public int attackButton = 0;
 
     public IEnumerator NextTour(PlayersManager playersManager, TerritoriesManager territoriesManager)
     {
-        int attackButton = 0;
+        
         int activePlayer = 0;
         int attacking_resources = 0;
 
@@ -100,25 +100,29 @@ public class GameManager
                     round = GameManager.Round.Fight;
                     break;
                 case GameManager.Round.Fight:
-                    attacking_resources = 0;
+                    Debug.Log("Player: " + playersManager.Players[activePlayer]);
+                    if (round != Round.Fight) break;
+                    int defending_resources = 0;
+            
                     attackButton = 0;
                     Debug.Log("Rozpoczynam walke. Wybieram teren do zaatakowania");
                     Territory destinationTerritory = null;
                     Territory attackingTerritory = null;
                     int activePlayerAround = 0;
-                    while (destinationTerritory == null || destinationTerritory.Owner != playersManager.Players[activePlayer] || activePlayerAround != 1)
+                    while (destinationTerritory == null || destinationTerritory.Owner == playersManager.Players[activePlayer] || activePlayerAround != 1)
                     {
                         destinationTerritory = territoriesManager.GetActiveTerritory();
+                        if (round != Round.Fight) break;
                         yield return null;
                         if (destinationTerritory == null) continue;
                         try
                         {
                             for (int neighboursIterator = 0; neighboursIterator < destinationTerritory.Neighoburs.Length; neighboursIterator++)
                             {
-                                //Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
-                                //   + " " + playersManager.Players[activePlayer]);
+                                
                                 if (destinationTerritory.Neighoburs[neighboursIterator].Owner != playersManager.Players[activePlayer]) activePlayerAround = 1;
-
+                               // Debug.Log(destinationTerritory.Neighoburs[neighboursIterator] + " " + destinationTerritory.Neighoburs[neighboursIterator].Owner
+                               //    + " " + playersManager.Players[activePlayer] + " activeplayerAr = " + activePlayerAround);
                             }
                         }
                         catch (NullReferenceException e)
@@ -127,6 +131,7 @@ public class GameManager
                         }
 
                     }
+                    if (round != Round.Fight) break;
 
                     destinationTerritory.GetComponent<SpriteRenderer>().color = territoriesManager.attackColor;
                     Debug.Log("destinationTerritory = " + destinationTerritory);
@@ -136,7 +141,8 @@ public class GameManager
                     {
                         int checkNeigbours = 0;
                         attackingTerritory = null;
-                        while (attackingTerritory == null || attackingTerritory.Owner == playersManager.Players[activePlayer] || checkNeigbours == 0)
+                        while (attackingTerritory == null || attackingTerritory.Owner != playersManager.Players[activePlayer] || checkNeigbours == 0 
+                            || attackingTerritory.resources < 2)
                         {
                             attackingTerritory = territoriesManager.GetActiveTerritory();
                             yield return null;
@@ -168,6 +174,37 @@ public class GameManager
 
                         Debug.Log("attackingTerritory = " + attackingTerritory + " AT res = " + attacking_resources + " AT.r = " + attackingTerritory.resources);
                     }
+                    Debug.Log("Wyszedlem z wybierania walczenia");
+                    attackButton = 0;
+                    defending_resources = destinationTerritory.resources;
+
+                    //tutaj bedzie losowanie walki
+                    String wynik = BoardManager.ThrowCubes(attacking_resources, defending_resources);
+                    String lostDef = "0";
+                    String lostAtt = "0";
+                    if (wynik != "null")
+                    {
+                        lostDef = wynik.Substring(0, wynik.LastIndexOf('/'));
+                        lostAtt = wynik.Substring(wynik.LastIndexOf('/')+1);
+                        Debug.Log("lostdef " + lostDef);
+                        Debug.Log("lostAtt " + lostAtt);
+                    }
+                    //walka skonczona, teraz liczymy wyniki
+                    defending_resources -= int.Parse(lostDef);
+                    attacking_resources -= int.Parse(lostAtt);
+
+                    if (defending_resources < 1)
+                    {
+                        Debug.Log("Teraz jeszcze terytorium " + destinationTerritory + " Nalezy do " + destinationTerritory.Owner);
+                        playersManager.Players[activePlayer].AddTerritory(destinationTerritory);
+                        destinationTerritory.resources = attacking_resources;
+                        attacking_resources = 0;
+                        Debug.Log("Zmiana wlasciciela. Wlascicielem " + destinationTerritory + " jest " + destinationTerritory.Owner + playersManager.Players[activePlayer]);
+                    }
+                    else
+                    {
+
+                    }
 
 
 
@@ -175,13 +212,23 @@ public class GameManager
                     break;
                 case GameManager.Round.Move:
                     Debug.Log("Zaczynam runde Move");
+
+
+
+
+
+
+
+
+
+                    Debug.Log("Przelaczam na gracza " + PlayerCount);
+                    activePlayer += 1;
+                    activePlayer = activePlayer % PlayerCount;
+                    Debug.Log("activePlayer = " + activePlayer);
+                    yield return null;
                     break;
             }
-            Debug.Log("PlayerCount " + PlayerCount);
-            activePlayer += 1;
-            activePlayer = activePlayer % PlayerCount;
-            Debug.Log("activePlayer = " + activePlayer);
-            yield return null;
+            
         }
 
         //int tura = GameManager.Tura.;
